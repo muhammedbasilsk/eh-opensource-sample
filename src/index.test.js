@@ -31,7 +31,7 @@ describe('starWars', function() {
     	})
 
     	it('should return an empty array if the number passed is more than the array size', function(){
-    		var countToBeGet = starWars.all.lenght+20;
+    		var countToBeGet = starWars.all.length+20;
     		var randomItems = starWars.random(countToBeGet)
     		expect(randomItems).to.have.length(0);
     	})
