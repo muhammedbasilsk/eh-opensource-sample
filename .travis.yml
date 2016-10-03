@@ -12,7 +12,7 @@ before_install:
 before_script:
   - npm prune
 before_script:
-  - npm run test:single
+  - npm run test
   - npm run check-coverage
 after_success:
   - npm run report-coverage
