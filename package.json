@@ -33,6 +33,5 @@
     "cz-conventional-changelog": "1.2.0",
     "mocha": "3.1.0",
     "semantic-release": "^4.3.5"
-  },
-  "czConfig": "node_modules/cz-conventional-changelog"
+  }
 }
