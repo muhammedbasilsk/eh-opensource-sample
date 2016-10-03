@@ -29,5 +29,11 @@ describe('starWars', function() {
     			expect(starWars.all).to.include(item);
     		});
     	})
+
+    	it('should return an empty array if the number passed is more than the array size', function(){
+    		var countToBeGet = starWars.all.lenght+20;
+    		var randomItems = starWars.random(countToBeGet)
+    		expect(randomItems).to.have.length(0);
+    	})
     })
 });

@@ -6,6 +6,8 @@ var _getRandomNumber = uniqueRandomArray(starWarsNames);
 function random(count) {
     if (typeof count == 'undefined') {
         return _getRandomNumber();
+    }else if(count > starWarsNames.length){
+    	return [];
     }
     var randomItems = [];
     for (var i = 0; i < count; i++) {
