@@ -1,14 +1,16 @@
 {
   "name": "opensource-micro-library",
-  "version": "1.5.0-beta.0",
   "description": "Get random charcter names",
   "main": "src/index.js",
+  "version": "0.0.0-sematically-released",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/index.test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/muhammedbasilsk/eh-opensource-sample.git"
+    "url": "https://github.com/muhammedbasilsk/eh-opensource-sample.git"
   },
   "keywords": [
     "random",
@@ -24,5 +26,13 @@
   "homepage": "https://github.com/muhammedbasilsk/eh-opensource-sample#readme",
   "dependencies": {
     "unique-random-array": "1.0.0"
-  }
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "commitizen": "2.8.6",
+    "cz-conventional-changelog": "1.2.0",
+    "mocha": "3.1.0",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": "node_modules/cz-conventional-changelog"
 }
