@@ -15,7 +15,7 @@ function random(count) {
     }
     return randomItems;
 }
-
+/*Adding commit*/
 module.exports = {
     all: starWarsNames,
     random: random
