@@ -1,0 +1,28 @@
+{
+  "name": "opensource-micro-library",
+  "version": "1.0.0",
+  "description": "Get random charcter names",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammedbasilsk/eh-opensource-sample.git"
+  },
+  "keywords": [
+    "random",
+    "names",
+    "open",
+    "source"
+  ],
+  "author": "Muhammed Basil <muhammedbasilsk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muhammedbasilsk/eh-opensource-sample/issues"
+  },
+  "homepage": "https://github.com/muhammedbasilsk/eh-opensource-sample#readme",
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  }
+}
