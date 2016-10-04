@@ -1,5 +1,6 @@
-var uniqueRandomArray = require('unique-random-array');
-var starWarsNames = require('./starwars-names');
+
+import uniqueRandomArray from 'unique-random-array';
+import starWarsNames from './starwars-names';
 
 var _getRandomNumber = uniqueRandomArray(starWarsNames);
 

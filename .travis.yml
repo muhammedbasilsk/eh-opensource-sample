@@ -11,9 +11,10 @@ before_install:
   - npm i -g npm@^2.0.0
 before_script:
   - npm prune
-before_script:
-  - npm run test
+script:
+  - npm run cover
   - npm run check-coverage
+  - npm run build
 after_success:
   - npm run report-coverage
   - npm run semantic-release
