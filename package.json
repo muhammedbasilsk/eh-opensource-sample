@@ -12,7 +12,10 @@
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "prebuild": "rimraf dist",
-    "build": "babel --copy-files --out-dir dist --ignore *.test.js src"
+    "build": "npm-run-all --parallel build:*",
+    "build:main": "babel --copy-files --out-dir dist --ignore *.test.js src",
+    "build:umd": "webpack --output-filename index.umd.js",
+    "build:umd.min": "webpack --output-filename index.umd.min.js -p"
   },
   "repository": {
     "type": "git",
@@ -34,25 +37,6 @@
     "url": "https://github.com/muhammedbasilsk/eh-opensource-sample/issues"
   },
   "homepage": "https://github.com/muhammedbasilsk/eh-opensource-sample#readme",
-  "dependencies": {
-    "unique-random-array": "1.0.0"
-  },
-  "devDependencies": {
-    "babel-cli": "6.16.0",
-    "babel-preset-es2015": "6.16.0",
-    "babel-preset-stage-2": "6.17.0",
-    "babel-register": "6.16.3",
-    "chai": "3.5.0",
-    "codecov": "1.0.1",
-    "commitizen": "2.8.6",
-    "cz-conventional-changelog": "1.2.0",
-    "ghooks": "1.3.2",
-    "istanbul": "0.4.5",
-    "mocha": "3.1.0",
-    "nyc": "8.3.0",
-    "rimraf": "2.5.4",
-    "semantic-release": "^4.3.5"
-  },
   "config": {
     "ghooks": {
       "pre-commit": "npm run cover && npm run check-coverage"
@@ -63,5 +47,28 @@
       "es2015",
       "stage-2"
     ]
+  },
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.16.0",
+    "babel-loader": "6.2.5",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-stage-2": "6.17.0",
+    "babel-register": "6.16.3",
+    "chai": "3.5.0",
+    "codecov": "1.0.1",
+    "commitizen": "2.8.6",
+    "cz-conventional-changelog": "1.2.0",
+    "ghooks": "1.3.2",
+    "istanbul": "0.4.5",
+    "json-loader": "0.5.4",
+    "mocha": "3.1.0",
+    "npm-run-all": "3.1.0",
+    "nyc": "8.3.0",
+    "rimraf": "2.5.4",
+    "semantic-release": "^4.3.5",
+    "webpack": "1.13.2"
   }
 }
